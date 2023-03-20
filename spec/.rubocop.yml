@@ -1,0 +1,62 @@
+inherit_from:
+  - ../.rubocop.yml
+
+require:
+  - rubocop-rspec
+
+RSpec/ExampleLength:
+  Max: 60
+
+RSpec/NestedGroups:
+  Max: 5
+
+RSpec/DescribedClass:
+  Enabled: false
+
+RSpec/AnyInstance:
+  Enabled: false
+
+RSpec/MessageSpies:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/SubjectStub:
+  Enabled: false
+
+Lint/AmbiguousBlockAssociation:
+  Enabled: false
+
+RSpec/FilePath:
+  Exclude:
+    - resources/**/*
+
+RSpec/LetSetup:
+  Exclude:
+    - resources/**/*  # there are auto generated tests
+
+RSpec/ContextWording:
+  Exclude:
+    - resources/**/*  # there are auto generated tests
+
+RSpec/MessageChain:
+  Enabled: false
+
+RSpec/StubbedMock:
+  Enabled: false
+
+RSpec/ExampleWording:
+  Enabled: false
+
+Style/HashSyntax:
+  Enabled: false
+
+RSpec/Rails/InferredSpecType:
+  Enabled: false
+
+RSpec/NoExpectationExample:
+  Enabled: false

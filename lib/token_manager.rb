@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative "token_manager/version"
+require_relative 'token_manager/version'
 
 class TokenManager
   OLD_KEY_TTL = 1.month

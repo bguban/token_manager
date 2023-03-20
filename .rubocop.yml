@@ -1,13 +1,55 @@
 AllCops:
-  TargetRubyVersion: 2.6
+  DisplayCopNames: true
+  TargetRubyVersion: 2.6.0
+  NewCops: enable
 
-Style/StringLiterals:
-  Enabled: true
-  EnforcedStyle: double_quotes
+require:
+  - rubocop-rake
 
-Style/StringLiteralsInInterpolation:
-  Enabled: true
-  EnforcedStyle: double_quotes
+Style/Documentation:
+  Enabled: false
 
-Layout/LineLength:
-  Max: 120
+Style/TrailingCommaInHashLiteral:
+  Enabled: false
+
+Style/SymbolArray:
+  Enabled: false
+
+Style/NumericLiterals:
+  Enabled: false
+
+Style/TrailingCommaInArguments:
+  Enabled: false
+
+Style/FormatStringToken:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 35
+
+Metrics/AbcSize:
+  Max: 40
+
+Style/WordArray:
+  Enabled: false
+
+Metrics/ClassLength:
+  Max: 110
+
+Metrics/CyclomaticComplexity:
+  Max: 10
+
+Style/Lambda:
+  EnforcedStyle: literal
+
+Lint/AmbiguousOperatorPrecedence:
+  Enabled: false
+
+Bundler/OrderedGems:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/RedundantSelf:
+  Enabled: false
