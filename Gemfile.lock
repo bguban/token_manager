@@ -2,20 +2,47 @@ PATH
   remote: .
   specs:
     token_manager (0.1.0)
+      activesupport
+      curb
+      faraday
       jwt (~> 2.0)
+      redis
 
 GEM
   remote: https://rubygems.org/
   specs:
+    activesupport (7.0.4.3)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 1.6, < 2)
+      minitest (>= 5.1)
+      tzinfo (~> 2.0)
     ast (2.4.2)
+    concurrent-ruby (1.2.2)
+    connection_pool (2.3.0)
+    curb (1.0.5)
+    database_cleaner-core (2.0.1)
+    database_cleaner-redis (2.0.0)
+      database_cleaner-core (~> 2.0.0)
+      redis
     diff-lcs (1.5.0)
+    faraday (2.7.4)
+      faraday-net_http (>= 2.0, < 3.1)
+      ruby2_keywords (>= 0.0.4)
+    faraday-net_http (3.0.2)
+    i18n (1.12.0)
+      concurrent-ruby (~> 1.0)
     json (2.6.3)
     jwt (2.7.0)
+    minitest (5.18.0)
     parallel (1.22.1)
     parser (3.2.1.1)
       ast (~> 2.4.1)
     rainbow (3.1.1)
     rake (13.0.6)
+    redis (5.0.6)
+      redis-client (>= 0.9.0)
+    redis-client (0.14.0)
+      connection_pool
     regexp_parser (2.7.0)
     rexml (3.2.5)
     rspec (3.12.0)
@@ -51,12 +78,16 @@ GEM
       rubocop (~> 1.33)
       rubocop-capybara (~> 2.17)
     ruby-progressbar (1.13.0)
+    ruby2_keywords (0.0.5)
+    tzinfo (2.0.6)
+      concurrent-ruby (~> 1.0)
     unicode-display_width (2.4.2)
 
 PLATFORMS
   x86_64-darwin-21
 
 DEPENDENCIES
+  database_cleaner-redis
   rake (~> 13.0)
   rspec (~> 3.0)
   rubocop (~> 1.21)

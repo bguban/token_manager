@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 require 'token_manager'
+require 'redis'
+require 'database_cleaner-redis'
+
+REDIS = Redis.new
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -11,5 +15,15 @@ RSpec.configure do |config|
 
   config.expect_with :rspec do |c|
     c.syntax = :expect
+  end
+
+  config.before(:suite) do
+    DatabaseCleaner[:redis].strategy = :deletion
+  end
+
+  config.around(:each) do |example|
+    DatabaseCleaner.cleaning do
+      example.run
+    end
   end
 end
