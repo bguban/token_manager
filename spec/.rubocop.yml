@@ -60,3 +60,6 @@ RSpec/Rails/InferredSpecType:
 
 RSpec/NoExpectationExample:
   Enabled: false
+
+RSpec/HookArgument:
+  Enabled: false
