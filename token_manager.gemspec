@@ -39,7 +39,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'curb'
   spec.add_dependency 'jwt', '~> 2.0'
   spec.add_dependency 'redis'
-  spec.add_dependency 'faraday'
 
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html

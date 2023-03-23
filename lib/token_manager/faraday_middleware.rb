@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class TokenManager::FaradayMiddleware
-  AUTH_HEADER = 'Authorization'.freeze
+  AUTH_HEADER = 'Authorization'
 
   def initialize(app = nil, &block)
     @app = app

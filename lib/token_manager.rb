@@ -107,7 +107,8 @@ class TokenManager
 
     response = Curl.get(@trusted_issuers.dig(iss, 'url'), kid: kid)
     unless response.response_code.in?(200..299)
-      raise(RetrievePublicKeyError, "Can't retrieve public_key from #{response.url}. Response code: #{response.response_code}")
+      raise(RetrievePublicKeyError,
+            "Can't retrieve public_key from #{response.url}. Response code: #{response.response_code}")
     end
 
     parsed = JSON.parse(response.body)
