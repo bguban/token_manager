@@ -21,8 +21,8 @@ class TokenManager
     @service_name = options['service_name'] || raise(ArgumentError, '`service_name` is required')
     @trusted_issuers = options['trusted_issuers'] || {}
     @token_ttl = options['token_ttl']
-    @public_key_ttl = options['public_key_ttl'] || 1.day
-    @old_key_ttl = options['public_key_ttl'] || 1.month
+    @public_key_ttl = options['public_key_ttl'] || 1.month
+    @old_key_ttl = options['old_key_ttl'] || 1.week
   end
 
   def encode(payload)
