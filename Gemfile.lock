@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    token_manager (0.1.0)
+    token_manager (0.1.1)
       activesupport
       curb
       jwt (~> 2.0)
