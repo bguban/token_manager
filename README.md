@@ -131,7 +131,7 @@ get 'public_keys', to: 'public_keys#index'
 ```
 
 Now you need to run `rails s -p 3000` for service A and `rails s -p 3001` for service B in different terminals 
-so the services can retrieve public keys and play in consoles 
+so the services can retrieve public keys. Open services' consoles and try next: 
 
 ```ruby
 # console A
