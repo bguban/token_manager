@@ -45,7 +45,7 @@ is skipped it will require to pass `exp` claim explicitly to every `encode` meth
 * public_key_ttl (default 1 month) not to retrieve the public_key each time the receiver caches it in Redis. 
 This is the Redis cache TTL
 
-* old_key_ttl (default 1 year) after you regenerate the `private_key` its `public_key` still must be 
+* old_key_ttl (default 1 week) after you regenerate the `private_key` its `public_key` still must be 
 stored to verify already generated tokens. This is the Redis cache TTL for the private and public keys.
 
 ```ruby

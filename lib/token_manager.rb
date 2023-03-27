@@ -22,7 +22,7 @@ class TokenManager
     @trusted_issuers = options['trusted_issuers'] || {}
     @token_ttl = options['token_ttl']
     @public_key_ttl = options['public_key_ttl'] || 1.month
-    @old_key_ttl = options['old_key_ttl'] || 1.year
+    @old_key_ttl = options['old_key_ttl'] || 1.week
   end
 
   def encode(payload)
