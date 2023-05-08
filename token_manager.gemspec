@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
     When you have a lot of microservices it can be hard to manage secret keys for all of them. TokenManager
     handles RSA keys generation, caching and verification.
   EODOC
-  spec.homepage = 'https://github.com/bguban'
+  spec.homepage = 'https://github.com/seekingalpha/token_manager'
   spec.license = 'MIT'
   spec.required_ruby_version = '>= 2.6.0'
 
